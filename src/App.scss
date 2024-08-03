@@ -45,7 +45,7 @@ $cyan-button-style: text-style($white, 16px, 900);
 $cyan-version-style: text-style($cyan-version, 16px, 900);
 $purple-button-style: text-style($white, 16px, 900);
 $purple-version-style: text-style($purple-version, 16px, 900);
-
+$section-style: text-style($slate-600, 16px, 900);
 
 
 #root {
@@ -156,6 +156,67 @@ $purple-version-style: text-style($purple-version, 16px, 900);
             }
 
           }
+        }
+      }
+    }
+    main {
+      .section_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .connected_line {
+          width: 1px;
+          height: 5rem;
+          background-color: $slate-300;
+          margin-top: 4rem;
+        }
+
+        .circle_number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: $slate-300 1px solid;
+          @include apply-style($section-style);
+        }
+
+        .main_images_container {
+
+          .main_images {
+
+          }
+
+
+
+        }
+      }
+    }
+
+    footer {
+      .section_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .connected_line {
+          width: 1px;
+          height: 5rem;
+          background-color: $slate-300;
+          margin-top: 4rem;
+        }
+
+        .circle_number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: $slate-300 1px solid;
+          @include apply-style($section-style);
         }
       }
     }

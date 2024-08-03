@@ -41,9 +41,12 @@ function App({data}) {
         </div>
       </header>
 
-      {/* <main>
-        <p className="section_icon">{section_1}</p>
-        <div className="main_images_container">
+      <main>
+        <div className="section_1">
+          <div className="connected_line"></div>
+          <div className="circle_number">{section_1}</div>
+        </div>
+        {/* <div className="main_images_container">
           {images_to_show.map((image, index) => (
             <img
               key={index}
@@ -55,14 +58,18 @@ function App({data}) {
         </div>
         <p className="sect_1_title">{section_1_title}</p>
         <p className="sect_1_quote">{section_1_quote}</p>
-        <p className="sect_1_desc">{section_1_description}</p>
-      </main> */}
+        <p className="sect_1_desc">{section_1_description}</p> */}
+      </main>
 
-      {/* <footer>
-        <p className="section_icon">{section_2}</p>
-        <p className="sect_2_title">{section_2_title}</p>
-        <p className="sect_2_desc">{section_2_description}</p>
-      </footer> */}
+      <footer>
+
+        <div className="section_1">
+          <div className="connected_line"></div>
+          <div className="circle_number">{section_2}</div>
+        </div>
+        {/* <p className="sect_2_title">{section_2_title}</p>
+        <p className="sect_2_desc">{section_2_description}</p> */}
+      </footer>
     </div>
   );
 }
