@@ -46,7 +46,7 @@ $cyan-version-style: text-style($cyan-version, 16px, 900);
 $purple-button-style: text-style($white, 16px, 900);
 $purple-version-style: text-style($purple-version, 16px, 900);
 $section-style: text-style($slate-600, 16px, 900);
-
+$small-quote-style: text-style($cyan-600, 16px, 900);
 
 #root {
   display: flex;
@@ -182,16 +182,53 @@ $section-style: text-style($slate-600, 16px, 900);
           border: $slate-300 1px solid;
           @include apply-style($section-style);
         }
+      }
 
-        .main_images_container {
+      .main_images_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        align-items: stretch;
+        gap: 1rem;
+        margin: 4rem 0;
+        padding: 0 2rem;
 
-          .main_images {
-
-          }
-
-
-
+        .main_image_container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
+
+        .main_image {
+          width: 100%;
+          height: auto;
+          border-radius: 10px;
+        }
+      }
+
+      .sect_1_title {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin: 0;
+        @include apply-style($small-quote-style);
+        font-size: 0.95rem;
+        line-height: 3.4rem;
+      }
+
+      .sect_1_quote {
+        margin: 0;
+        @include apply-style($app-quote-style);
+        font-size: 2.3rem;
+        padding: 0 2rem;
+        line-height: 3.4rem;
+      }
+
+      .sect_1_desc {
+        margin: 0;
+        @include apply-style($app-desc-style);
+        padding: 0 2.5rem;
+        line-height: 1.8rem;
+        margin-top: 1.5rem;
       }
     }
 

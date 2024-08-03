@@ -46,19 +46,20 @@ function App({data}) {
           <div className="connected_line"></div>
           <div className="circle_number">{section_1}</div>
         </div>
-        {/* <div className="main_images_container">
+        <div className="main_images_container">
           {images_to_show.map((image, index) => (
-            <img
-              key={index}
-              className={`main_images index-${index}`}
-              src={image}
-              alt={`icon-${index + 1}`}
-            />
+            <div key={index} className={`main_image_container image-${index % 4}`}>
+              <img
+                className="main_image"
+                src={image}
+                alt={`icon-${index + 1}`}
+              />
+            </div>
           ))}
         </div>
         <p className="sect_1_title">{section_1_title}</p>
         <p className="sect_1_quote">{section_1_quote}</p>
-        <p className="sect_1_desc">{section_1_description}</p> */}
+        <p className="sect_1_desc">{section_1_description}</p>
       </main>
 
       <footer>
