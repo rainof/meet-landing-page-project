@@ -9,7 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const appData = {
   quote: "Group Chat for Everyone",
   description: "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.",
-  download_button: "Download v1.3",
+  download_button: "Download",
+  download_version: "v1.3",
   what_button: "What is it?",
   section_1: "01",
   section_1_title: "Built for modern use",

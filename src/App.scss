@@ -1,45 +1,163 @@
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('./assets/fonts/RedHatDisplay-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('./assets/fonts/RedHatDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@function text-style($color, $font-size, $font-weight, $font-family: "Red Hat Display") {
+  @return (
+    color: $color,
+    font-size: $font-size,
+    font-weight: $font-weight,
+    font-family: $font-family
+  );
+}
+
+@mixin apply-style($styles) {
+  @each $property, $value in $styles {
+    #{$property}: $value;
+  }
+}
+
 $cyan-600: hsl(192, 37, 48);
-$cyan-300: hsl(192, 90, 77);
+$cyan-300: #71C0D4;
+$cyan-version: hsl(192, 90%, 77%);
 $purple-600: hsl(268, 34, 53);
 $purple-300: hsl(268, 100, 86);
+$purple-version: hsl(268, 100%, 93%);
 $slate-900: hsl(240, 21, 20);
 $slate-600: hsl(240, 10, 57);
 $slate-300: hsl(240, 18, 85);
 $white: hsl(0, 0, 98);
 
-#root {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // height: auto;
+$app-quote-style: text-style($slate-900, 64px, 900);
+$app-desc-style: text-style($slate-600, 18px, 500);
+$cyan-button-style: text-style($white, 16px, 900);
+$cyan-version-style: text-style($cyan-version, 16px, 900);
+$purple-button-style: text-style($white, 16px, 900);
+$purple-version-style: text-style($purple-version, 16px, 900);
 
-  background-color: $white;
+
+
+#root {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  height: auto;
+  text-align: center;
 
-.app {
-
-
-  .main_images {
-    display: inline-block;
-    justify-content: center;
-    width: 20vw;
-    margin: 0 10px;
-    border-radius: 5px;
-  }
-
-  .section_icon {
+  .app {
+    width: auto;
     display: flex;
-    align-items: center; /* Center text vertically */
+    flex-direction: column;
     justify-content: center;
-    border: $slate-300 1px solid;
-    border-radius: 50%;
-    background-color: $white;
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
+    align-items: center;
+    margin: 4rem 0;
+
+    .logo {
+      margin-bottom: 4rem;
+      height: 12%;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .hero_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .hero_left, .hero_right {
+          display: none;
+        }
+
+        .hero_merge {
+          width: 97%;
+        }
+      }
+
+      .hero_container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .app_header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .app_quote {
+          margin-bottom: 10px;
+          @include apply-style($app-quote-style);
+          font-size: 2.9rem;
+          padding: 0 45px;
+          line-height: 3.4rem;
+        }
+
+        .app_desc {
+          margin-bottom: 20px;
+          @include apply-style($app-desc-style);
+          padding: 0 30px;
+          line-height: 1.8rem;
+        }
+
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 15px;
+          margin-top: 1rem;
+
+          .download_btn {
+            padding: 20px 50px;
+            border-radius: 30px;
+            background-color: $cyan-600;
+            border-style: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            .download_text {
+              @include apply-style($cyan-button-style);
+            }
+
+            .download_version {
+              @include apply-style($cyan-version-style);
+            }
+
+            &:hover {
+              background-color: $cyan-300;
+            }
+          }
+
+          .what_btn {
+            padding: 20px 10px;
+            border-radius: 30px;
+            background-color: $purple-600;
+            border-style: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            @include apply-style($purple-button-style);
+
+            &:hover {
+              background-color: $purple-300;
+            }
+
+          }
+        }
+      }
+    }
   }
 }
