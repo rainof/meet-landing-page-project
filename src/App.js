@@ -29,6 +29,19 @@ function App({data}) {
       <header>
         <div className="hero_container">
           <img className="hero_left" src={hero_left} alt="hero left" />
+          <div className="app_header_between">
+            <p className="app_quote">
+              <div>{quote_1}</div>
+              <div>{quote_2}</div>
+            </p>
+            <p className="app_desc">{description}</p>
+            <div className="button_container">
+              <button className="download_btn">
+                <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
+              </button>
+              <button className="what_btn">{what_button}</button>
+            </div>
+          </div>
           <img className="hero_right" src={hero_right} alt="hero right" />
           <img className="hero_merge" src={hero_merge} alt="hero" />
         </div>
