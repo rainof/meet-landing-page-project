@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/meet-landing-page-project/static/css/main.cb03bea6.css",
+    "main.js": "/meet-landing-page-project/static/js/main.0b95cae1.js",
+    "static/js/453.2812ee55.chunk.js": "/meet-landing-page-project/static/js/453.2812ee55.chunk.js",
+    "static/media/image-hero.png": "/meet-landing-page-project/static/media/image-hero.3dbd9bf0eff94c50b694.png",
+    "static/media/image-hero-right.png": "/meet-landing-page-project/static/media/image-hero-right.95e30a4c336196db688f.png",
+    "static/media/image-hero-left.png": "/meet-landing-page-project/static/media/image-hero-left.40626e782bf59ca427b5.png",
+    "static/media/image-footer.jpg": "/meet-landing-page-project/static/media/image-footer.b047b7977a3a98b6fbca.jpg",
+    "static/media/RedHatDisplay-Medium.ttf": "/meet-landing-page-project/static/media/RedHatDisplay-Medium.3f3a8f4b5d0861029630.ttf",
+    "static/media/RedHatDisplay-Black.ttf": "/meet-landing-page-project/static/media/RedHatDisplay-Black.4dd2d9a951df7e121026.ttf",
+    "static/media/image-men-in-meeting.jpg": "/meet-landing-page-project/static/media/image-men-in-meeting.19b0c4382d0d2c77de83.jpg",
+    "static/media/image-man-texting.jpg": "/meet-landing-page-project/static/media/image-man-texting.ce697f53d9703cae1980.jpg",
+    "static/media/image-woman-in-videocall.jpg": "/meet-landing-page-project/static/media/image-woman-in-videocall.346ccf01daac434d9814.jpg",
+    "static/media/image-women-videochatting.jpg": "/meet-landing-page-project/static/media/image-women-videochatting.bd9bcb9739c1fb0ad169.jpg",
+    "static/media/logo.svg": "/meet-landing-page-project/static/media/logo.8282cfa9c8badf295f20b64be4fe1310.svg",
+    "index.html": "/meet-landing-page-project/index.html",
+    "main.cb03bea6.css.map": "/meet-landing-page-project/static/css/main.cb03bea6.css.map",
+    "main.0b95cae1.js.map": "/meet-landing-page-project/static/js/main.0b95cae1.js.map",
+    "453.2812ee55.chunk.js.map": "/meet-landing-page-project/static/js/453.2812ee55.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb03bea6.css",
+    "static/js/main.0b95cae1.js"
+  ]
+}
