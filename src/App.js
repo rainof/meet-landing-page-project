@@ -12,7 +12,7 @@ import tablet_footer from './assets/tablet/image-footer.jpg'
 import desktop_footer from './assets/desktop/image-footer.jpg'
 
 function App({data}) {
-  const { quote, description, download_button, download_version, what_button, section_1, section_1_title, section_1_quote, section_1_description, section_2, section_2_title, section_2_description } = data;
+  const { quote_1, quote_2, description, download_button, download_version, what_button, section_1, section_1_title, section_1_quote, section_1_description, section_2, section_2_title, section_2_description } = data;
 
   const image_files = [
     woman_videocall,
@@ -33,7 +33,10 @@ function App({data}) {
           <img className="hero_merge" src={hero_merge} alt="hero" />
         </div>
         <div className="app_header">
-          <p className="app_quote">{quote}</p>
+          <p className="app_quote">
+            <div>{quote_1}</div>
+            <div>{quote_2}</div>
+          </p>
           <p className="app_desc">{description}</p>
           <div className="button_container">
             <button className="download_btn">

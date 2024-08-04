@@ -7,7 +7,8 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const appData = {
-  quote: "Group Chat for Everyone",
+  quote_1: "Group Chat",
+  quote_2: "for Everyone",
   description: "Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.",
   download_button: "Download",
   download_version: "v1.3",
