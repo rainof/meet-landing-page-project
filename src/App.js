@@ -35,10 +35,12 @@ function App({data}) {
         <div className="app_header">
           <p className="app_quote">{quote}</p>
           <p className="app_desc">{description}</p>
-          <button className="download_btn">
-            <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
-          </button>
-          <button className="what_btn">{what_button}</button>
+          <div className="button_container">
+            <button className="download_btn">
+              <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
+            </button>
+            <button className="what_btn">{what_button}</button>
+          </div>
         </div>
       </header>
 
