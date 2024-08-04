@@ -7,6 +7,9 @@ import woman_videocall from './assets/desktop/image-woman-in-videocall.jpg'
 import women_chatting from './assets/desktop/image-women-videochatting.jpg'
 import men_meeting from './assets/desktop/image-men-in-meeting.jpg'
 import man_texting from './assets/desktop/image-man-texting.jpg'
+import mobile_footer from './assets/mobile/image-footer.jpg'
+import tablet_footer from './assets/tablet/image-footer.jpg'
+import desktop_footer from './assets/desktop/image-footer.jpg'
 
 function App({data}) {
   const { quote, description, download_button, download_version, what_button, section_1, section_1_title, section_1_quote, section_1_description, section_2, section_2_title, section_2_description } = data;
@@ -25,19 +28,17 @@ function App({data}) {
       <img className="logo" src={logo_img} alt="logo" />
       <header>
         <div className="hero_container">
-          <img className="hero_left" src={hero_left} alt="hero_left" />
-          <img className="hero_right" src={hero_right} alt="hero_right" />
+          <img className="hero_left" src={hero_left} alt="hero left" />
+          <img className="hero_right" src={hero_right} alt="hero right" />
           <img className="hero_merge" src={hero_merge} alt="hero" />
         </div>
         <div className="app_header">
           <p className="app_quote">{quote}</p>
           <p className="app_desc">{description}</p>
-          <div className="buttons">
-            <button className="download_btn">
-              <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
-            </button>
-            <button className="what_btn">{what_button}</button>
-          </div>
+          <button className="download_btn">
+            <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
+          </button>
+          <button className="what_btn">{what_button}</button>
         </div>
       </header>
 
@@ -63,13 +64,27 @@ function App({data}) {
       </main>
 
       <footer>
-
-        <div className="section_1">
+        <div className="section_2">
           <div className="connected_line"></div>
           <div className="circle_number">{section_2}</div>
         </div>
-        {/* <p className="sect_2_title">{section_2_title}</p>
-        <p className="sect_2_desc">{section_2_description}</p> */}
+        <div className="footer_container">
+          <div className="footer_bg">
+            <div className="footer_overlay"></div>
+            <img className="mobile_footer" src={mobile_footer} alt="mobile foooter" />
+            <img className="tablet_footer" src={tablet_footer} alt="tablet footer" />
+            <img className="desktop_footer" src={desktop_footer} alt="desktop footer" />
+          </div>
+          <div className="footer_content">
+            <p className="sect_2_title">{section_2_title}</p>
+            <p className="sect_2_desc">{section_2_description}</p>
+            <div className="buttons">
+              <button className="download_btn">
+                <span className="download_text">{download_button}</span> <span className="download_version">{download_version}</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

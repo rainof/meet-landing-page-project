@@ -31,6 +31,7 @@
 $cyan-600: hsl(192, 37, 48);
 $cyan-300: #71C0D4;
 $cyan-version: hsl(192, 90%, 77%);
+$footer-overlay: hsla(192, 37, 48, 0.9);
 $purple-600: hsl(268, 34, 53);
 $purple-300: hsl(268, 100, 86);
 $purple-version: hsl(268, 100%, 93%);
@@ -41,6 +42,8 @@ $white: hsl(0, 0, 98);
 
 $app-quote-style: text-style($slate-900, 64px, 900);
 $app-desc-style: text-style($slate-600, 18px, 500);
+$footer-quote-style: text-style($white, 64px, 900);
+$footer_desc-style: text-style($white, 18px, 500);
 $cyan-button-style: text-style($white, 16px, 900);
 $cyan-version-style: text-style($cyan-version, 16px, 900);
 $purple-button-style: text-style($white, 16px, 900);
@@ -51,9 +54,11 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
 #root {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: auto;
+  align-items: flex-start;
+  height: 100vh;
   text-align: center;
+  overflow-x: hidden;
+  margin: 0;
 
   .app {
     width: auto;
@@ -61,7 +66,7 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4rem 0;
+    margin-top: 4rem;
 
     .logo {
       margin-bottom: 4rem;
@@ -114,48 +119,42 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
           line-height: 1.8rem;
         }
 
-        .buttons {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 15px;
+        .download_btn {
+          padding: 20px 50px;
+          margin-top: 0.5rem;
+          border-radius: 30px;
+          background-color: $cyan-600;
+          border-style: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          .download_text {
+            @include apply-style($cyan-button-style);
+          }
+
+          .download_version {
+            @include apply-style($cyan-version-style);
+          }
+
+          &:hover {
+            background-color: $cyan-300;
+          }
+        }
+
+        .what_btn {
+          padding: 20px 45px;
           margin-top: 1rem;
+          border-radius: 30px;
+          background-color: $purple-600;
+          border-style: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          @include apply-style($purple-button-style);
 
-          .download_btn {
-            padding: 20px 50px;
-            border-radius: 30px;
-            background-color: $cyan-600;
-            border-style: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-
-            .download_text {
-              @include apply-style($cyan-button-style);
-            }
-
-            .download_version {
-              @include apply-style($cyan-version-style);
-            }
-
-            &:hover {
-              background-color: $cyan-300;
-            }
+          &:hover {
+            background-color: $purple-300;
           }
 
-          .what_btn {
-            padding: 20px 10px;
-            border-radius: 30px;
-            background-color: $purple-600;
-            border-style: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            @include apply-style($purple-button-style);
-
-            &:hover {
-              background-color: $purple-300;
-            }
-
-          }
         }
       }
     }
@@ -233,16 +232,21 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
     }
 
     footer {
-      .section_1 {
+      position: relative;
+
+      .section_2 {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        z-index: 3;
+        transform: translate(0%, 15%);
 
         .connected_line {
           width: 1px;
           height: 5rem;
           background-color: $slate-300;
-          margin-top: 4rem;
+          margin-top: 3.5rem;
         }
 
         .circle_number {
@@ -251,9 +255,87 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
           align-items: center;
           width: 50px;
           height: 50px;
+          background-color: $white;
           border-radius: 50%;
           border: $slate-300 1px solid;
           @include apply-style($section-style);
+        }
+      }
+
+      .footer_container {
+        position: relative;
+        width: 100vw;
+
+        .footer_bg {
+          position: relative;
+
+          .mobile_footer {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+
+          .tablet_footer, .desktop_footer {
+            display: none;
+          }
+
+          .footer_overlay {
+            position: absolute;
+            width: 100vw;
+            height: 100%;
+            background-color: $footer-overlay;
+            // z-index: 1;
+          }
+        }
+
+        .footer_content {
+          position: absolute;
+          padding-top: 2rem;
+          z-index: 2;
+          transform: translate(0%, -108vw);
+
+          .sect_2_title {
+            margin: 0;
+            @include apply-style($footer-quote-style);
+            font-size: 2.3rem;
+            padding: 0 2rem;
+            line-height: 3.4rem;
+          }
+
+          .sect_2_desc {
+            margin: 0;
+            @include apply-style($footer-desc-style);
+            font-size: 1.1rem;
+            padding: 0 2.5rem;
+            line-height: 1.8rem;
+            margin-top: 1.5rem;
+          }
+
+          .buttons {
+
+            margin-top: 2rem;
+
+            .download_btn {
+              padding: 20px 50px;
+              border-radius: 30px;
+              background-color: $purple-600;
+              border-style: none;
+              cursor: pointer;
+              transition: background-color 0.3s;
+
+              .download_text {
+                @include apply-style($purple-button-style);
+              }
+
+              .download_version {
+                @include apply-style($purple-version-style);
+              }
+
+              &:hover {
+                background-color: $purple-300;
+              }
+            }
+          }
         }
       }
     }
