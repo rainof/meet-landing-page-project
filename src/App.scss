@@ -103,19 +103,18 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 10vw;
 
         .app_quote {
           margin-bottom: 10px;
           @include apply-style($app-quote-style);
           font-size: 2.9rem;
-          padding: 0 45px;
           line-height: 3.4rem;
         }
 
         .app_desc {
           margin-bottom: 20px;
           @include apply-style($app-desc-style);
-          padding: 0 30px;
           line-height: 1.8rem;
         }
 
@@ -218,14 +217,14 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
         margin: 0;
         @include apply-style($app-quote-style);
         font-size: 2.3rem;
-        padding: 0 2rem;
+        padding: 0 15vw;
         line-height: 3.4rem;
       }
 
       .sect_1_desc {
         margin: 0;
         @include apply-style($app-desc-style);
-        padding: 0 2.5rem;
+        padding: 0 12vw;
         line-height: 1.8rem;
         margin-top: 1.5rem;
       }
@@ -284,7 +283,6 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
             width: 100vw;
             height: 100%;
             background-color: $footer-overlay;
-            // z-index: 1;
           }
         }
 
@@ -298,15 +296,15 @@ $small-quote-style: text-style($cyan-600, 16px, 900);
             margin: 0;
             @include apply-style($footer-quote-style);
             font-size: 2.3rem;
-            padding: 0 2rem;
+            padding: 0 12vw;
             line-height: 3.4rem;
           }
 
           .sect_2_desc {
             margin: 0;
             @include apply-style($footer-desc-style);
-            font-size: 1.1rem;
-            padding: 0 2.5rem;
+            font-size: 1em;
+            padding: 0 10vw;
             line-height: 1.8rem;
             margin-top: 1.5rem;
           }
